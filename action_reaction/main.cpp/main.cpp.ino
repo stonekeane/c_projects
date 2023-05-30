@@ -1,17 +1,20 @@
+#define LED_PIN 7
+#define BUTTON_PIN 10
+
 void setup() 
 {
-  pinMode(7, OUTPUT);
-  pinMode(10, INPUT);
+  pinMode(LED_PIN, OUTPUT);
+  pinMode(BUTTON_PIN, INPUT);
 }
 
 void loop() 
 {
-  if (digitalRead(10) == 1)
+  if (digitalRead(BUTTON_PIN) == 1)
   {
-    digitalWrite(7, HIGH);
+    digitalWrite(LED_PIN, HIGH);
   }
   else
   {
-    digitalWrite(7, LOW);
+    digitalWrite(LED_PIN, LOW);
   }
 }
